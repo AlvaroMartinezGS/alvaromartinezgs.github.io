@@ -119,3 +119,44 @@ h2:hover {
 html {
   scroll-behavior: smooth;
 }
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: #7a2c2c;
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1100;
+    border-radius: 4px;
+    padding: 8px 12px;
+    transition: background 0.3s;
+  }
+
+  .menu-toggle:hover {
+    background: #5e1f1f;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 220px;
+    height: 100%;
+    background-color: #ebeca9;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    padding-top: 70px; /* para no tapar el botón */
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  main {
+    margin-left: 0;
+    padding: 10px;
+  }
+}
