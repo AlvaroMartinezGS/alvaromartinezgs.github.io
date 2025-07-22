@@ -16,4 +16,103 @@ body {
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Más estilos definidos en la versión 4 */
+.sidebar h1 {
+  font-size: 1.4em;
+  color: #7a2c2c;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar .profile-pic img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 15px auto;
+  object-fit: cover;
+  border: 3px solid #7a2c2c;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar nav a {
+  color: #333;
+  text-decoration: none;
+  padding: 8px 0;
+  transition: color 0.3s, padding-left 0.3s;
+}
+
+.sidebar nav a:hover {
+  color: #7a2c2c;
+  padding-left: 5px;
+}
+
+.download-cv {
+  margin-top: 15px;
+  background-color: #7a2c2c;
+  color: #fff !important;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+main {
+  margin-left: 270px;
+  padding: 20px;
+  max-width: 900px;
+}
+
+h2 {
+  color: #7a2c2c;
+  border-bottom: 2px solid #7a2c2c;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  transition: border-width 0.3s;
+}
+
+h2:hover {
+  border-bottom: 4px solid #7a2c2c;
+}
+
+.icons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.icons-grid div {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.icons-grid div:hover {
+  transform: translateY(-5px);
+}
+
+.icons-grid i {
+  font-size: 1.5em;
+  color: #7a2c2c;
+  margin-bottom: 8px;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
