@@ -1,3 +1,2 @@
 
-// Placeholder para funciones adicionales de interactividad si se necesitan
-console.log('Portfolio cargado');
+console.log("Portfolio v2 cargado");

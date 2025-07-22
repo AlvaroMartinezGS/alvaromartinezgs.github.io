@@ -1,85 +1,89 @@
 
 body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  display: flex;
   background-color: #f5f5f5;
   color: #333;
 }
 
-header {
+.sidebar {
+  width: 250px;
+  background-color: #f2f0d8; /* Mostaza claro */
+  padding: 20px;
   position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #222;
-  color: #fff;
-  padding: 15px 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
+  height: 100%;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
-header .container {
+.sidebar h1 {
+  font-size: 1.4em;
+  color: #7a2c2c; /* Burdeos */
+}
+
+.sidebar .profile-pic img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 15px auto;
+  object-fit: cover;
+}
+
+.sidebar nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: auto;
-  padding: 0 20px;
+  flex-direction: column;
 }
 
-header nav a {
-  color: #fff;
-  margin: 0 10px;
+.sidebar nav a {
+  color: #333;
   text-decoration: none;
+  padding: 8px 0;
   transition: color 0.3s;
 }
 
-header nav a:hover {
-  color: #ff9800;
+.sidebar nav a:hover {
+  color: #7a2c2c;
 }
 
-.section {
-  max-width: 1000px;
-  margin: 100px auto;
+.sidebar .download-cv {
+  margin-top: 15px;
+  background-color: #7a2c2c;
+  color: #fff !important;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+main {
+  margin-left: 270px;
   padding: 20px;
+  max-width: 900px;
 }
 
 h2 {
-  color: #444;
+  color: #7a2c2c;
+  border-bottom: 2px solid #7a2c2c;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
 }
 
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+h3 {
+  color: #333;
+  margin-top: 20px;
 }
 
-.card {
-  flex: 1 1 calc(33% - 20px);
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-  cursor: pointer;
+.section {
+  margin-bottom: 50px;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+ul li a {
+  color: #333;
+  text-decoration: none;
 }
 
-.card .details {
-  display: none;
-  margin-top: 10px;
-}
-
-.card:hover .details {
-  display: block;
-}
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #222;
-  color: #fff;
+ul li a:hover {
+  color: #7a2c2c;
+  text-decoration: underline;
 }
