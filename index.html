@@ -3,45 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      background-color: #f5f5f5;
-    }
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px 0;
-    }
-    section {
-      padding: 20px;
-    }
-  </style>
+  <title>Álvaro Martínez - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header>
-    <h1>¡Hola! Soy Álvaro</h1>
-    <p>Sociólogo</p>
+    <div class="container">
+      <h1>Álvaro Martínez García-Salmones</h1>
+      <nav>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#formacion">Formación</a>
+        <a href="#competencias">Competencias</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
   </header>
-  <section>
+
+  <section id="sobre-mi" class="section">
     <h2>Sobre mí</h2>
-    <p>Desde mi perfil de investigador social, desarrollo proyectos de investigación, sensibilización e intervención. Convocatorias 0,7 y FSE.
-Especializado infancia y juventud, desde un enfoque
-de respeto a la diversidad y promoción de la igualdad, poniendo especial atención en las vulnerabilidades.</p>
+    <p>Investigador social especializado en infancia y juventud, con experiencia en proyectos de investigación, sensibilización e intervención, desde una perspectiva de igualdad y diversidad.</p>
   </section>
-  <section>
-    <h2>Proyectos</h2>
+
+  <section id="experiencia" class="section">
+    <h2>Experiencia</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Coordinador de proyectos - Cruz Roja (2022)</h3>
+        <p class="details">Coordinación, gestión y justificación de proyectos IRPF en áreas de infancia y juventud.</p>
+      </div>
+      <div class="card">
+        <h3>REEDI 2 - Fundación Atenea (2024-2025)</h3>
+        <p class="details">Coordinación, diseño, trabajo de campo, análisis, redacción y comunicación.</p>
+      </div>
+      <div class="card">
+        <h3>REEDI - Fundación Atenea (2023)</h3>
+        <p class="details">Revisión de ecosistemas educativos digitales para la inclusión. Diseño y análisis de resultados.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="formacion" class="section">
+    <h2>Formación</h2>
     <ul>
-      <li>Proyecto 1 - <a href="#">Ver más</a></li>
-      <li>Proyecto 2 - <a href="#">Ver más</a></li>
+      <li>Máster en Comunicación, Cultura, Sociedad y Política - UNED (2019)</li>
+      <li>Grado en Sociología - Universidad Complutense de Madrid (2015)</li>
     </ul>
   </section>
+
+  <section id="competencias" class="section">
+    <h2>Competencias</h2>
+    <p>Diseño y ejecución de proyectos, análisis cuantitativo y cualitativo, producción audiovisual, gestión de grupos.</p>
+    <h3>Herramientas</h3>
+    <p>SPSS, Stata, R, Excel, Atlas.ti, QGis, InDesign, Photoshop, DaVinci.</p>
+  </section>
+
+  <section id="contacto" class="section">
+    <h2>Contacto</h2>
+    <p>Email: <a href="mailto:alvaro.martinezgs@gmail.com">alvaro.martinezgs@gmail.com</a></p>
+    <p>Teléfono: <a href="tel:+34636836034">636 836 034</a></p>
+  </section>
+
   <footer>
-    <p>Contacto: alvaro.martinezgs@gmail.com</p>
+    <p>&copy; 2025 Álvaro Martínez</p>
   </footer>
 </body>
 </html>
