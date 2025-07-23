@@ -62,6 +62,8 @@ body {
 }
 
 main {
+  position: relative;
+  z-index: 1;
   margin-left: 270px;
   padding: 20px;
   max-width: 900px;
