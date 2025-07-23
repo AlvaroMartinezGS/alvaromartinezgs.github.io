@@ -313,3 +313,8 @@ h3:hover::after {
   margin-bottom: 5px;
   font-size: 0.95em;
 }
+
+
+#contribuciones h3 {
+  color: #4e6173 !important;
+}
