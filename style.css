@@ -310,3 +310,16 @@ html {
 .download-cv i {
   margin-right: 5px;          /* Espacio entre icono y texto */
 }
+body {
+  display: flex;
+  flex-direction: row;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  clear: both;
+  width: 100%;
+}
