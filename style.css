@@ -278,4 +278,28 @@ html {
 /* Al pasar el ratón, la línea se alarga */
 #experiencia h3:hover::after {
   width: 100%;
+h3 {
+  color: #4e6173;                 /* Azul grisáceo */
+  font-size: 1.2em;
+  font-weight: 600;
+  margin: 20px 0 10px 0;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #4e6173;
+  transition: width 0.3s ease;
+}
+
+h3:hover::after {
+  width: 100%;
+}
 
