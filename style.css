@@ -294,3 +294,19 @@ html {
   margin-bottom: 5px;
   font-size: 0.95em;
 }
+.download-cv {
+  margin-top: 15px;
+  background-color: #7a2c2c;
+  color: #fff !important;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;             /* Para que ocupe todo el ancho */
+  justify-content: center;    /* Centra el contenido si se usa flex */
+}
+
+.download-cv i {
+  margin-right: 5px;          /* Espacio entre icono y texto */
+}
