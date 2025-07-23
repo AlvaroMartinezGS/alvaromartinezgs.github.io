@@ -303,3 +303,13 @@ h3:hover::after {
   width: 100%;
 }
 
+#idiomas ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#idiomas ul li {
+  margin-bottom: 5px;
+  font-size: 0.95em;
+}
