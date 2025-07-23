@@ -77,12 +77,33 @@ main {
   max-width: 900px;
 }
 
+
+
 @media screen and (max-width: 768px) {
   main {
     margin-left: 0;
-    padding: 20px 20px;
+    padding: 10px 15px;   /* Reduzco el padding lateral */
+    max-width: 100%;      /* Ocupa todo el ancho */
+    box-sizing: border-box; /* Asegura que padding no sume ancho */
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 220px;
+    height: 100%;
+    background-color: #ebeca9;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    padding-top: 70px; /* para no tapar el botón */
+  }
+
+  .sidebar.open {
+    left: 0;
   }
 }
+
 
 h2 {
   color: #7a2c2c;
