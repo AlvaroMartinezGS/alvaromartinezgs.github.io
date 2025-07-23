@@ -378,3 +378,10 @@ main {
   border-top: 1px solid #ccc;
 }
 
+
+.sidebar nav a i {
+  display: inline-block;
+  width: 20px;                 /* Igual ancho para todos los iconos */
+  text-align: center;
+  margin-right: 8px;
+}
