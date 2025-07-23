@@ -228,6 +228,19 @@ html {
   background-color: #4e6173;
   transition: width 0.3s ease;
 }
+/* Ajustes de espacio en experiencia laboral */
+#experiencia h3 {
+  margin-bottom: 0;   /* Quita el aire debajo del título */
+}
+
+#experiencia ul {
+  margin-top: 0;      /* Quita el aire arriba de la lista */
+  padding-left: 20px; /* Mantén algo de sangría */
+}
+
+#experiencia ul li {
+  margin-bottom: 3px; /* Espacio compacto entre elementos */
+}
 
 /* Al pasar el ratón, la línea se alarga */
 #experiencia h3:hover::after {
