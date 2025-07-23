@@ -64,9 +64,15 @@ body {
 main {
   position: relative;
   z-index: 1;
-  margin-left: 270px;
-  padding: 20px;
+  margin-left: 300px;   /* Separación del menú */
+  padding: 20px 40px;   /* Añadimos padding, con 40px a derecha e izquierda */
   max-width: 900px;
+}
+@media screen and (max-width: 768px) {
+  main {
+    margin-left: 0;
+    padding: 20px 20px;
+  }
 }
 
 h2 {
