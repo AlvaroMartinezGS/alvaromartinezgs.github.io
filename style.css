@@ -168,3 +168,9 @@ html {
     padding: 10px;
   }
 }
+.sidebar nav a i {
+  display: inline-block;
+  width: 20px;    /* Ajusta el ancho para que todos los iconos ocupen el mismo espacio */
+  text-align: center;
+  margin-right: 8px;
+}
