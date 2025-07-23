@@ -266,6 +266,14 @@ html {
   text-decoration: underline;
   color: #a33b3b;
 }
+#contribuciones ul ul {
+  margin: 5px 0 10px 20px; /* Sangría y espacio */
+  list-style-type: disc;   /* Cambiar viñetas a puntos */
+}
+
+#contribuciones ul ul li {
+  font-size: 0.9em;        /* Texto ligeramente más pequeño */
+}
 
 /* Al pasar el ratón, la línea se alarga */
 #experiencia h3:hover::after {
