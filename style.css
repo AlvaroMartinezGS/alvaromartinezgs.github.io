@@ -241,6 +241,31 @@ html {
 #experiencia ul li {
   margin-bottom: 3px; /* Espacio compacto entre elementos */
 }
+#contribuciones ul {
+  list-style-type: none; /* Sin viñetas */
+  margin: 0;
+  padding-left: 0;
+}
+
+#contribuciones ul li {
+  margin-bottom: 5px;
+  font-size: 0.95em;
+}
+
+#contribuciones ul li strong {
+  color: #000; /* Año en negro */
+}
+
+#contribuciones a {
+  color: #7a2c2c; /* Color burdeos como en experiencia */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#contribuciones a:hover {
+  text-decoration: underline;
+  color: #a33b3b;
+}
 
 /* Al pasar el ratón, la línea se alarga */
 #experiencia h3:hover::after {
