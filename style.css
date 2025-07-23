@@ -174,3 +174,36 @@ html {
   text-align: center;
   margin-right: 8px;
 }
+
+/* Estilo base para los enlaces en experiencia laboral */
+#experiencia a {
+  color: #7a2c2c;            /* Color burdeos */
+  text-decoration: none;     /* Sin subrayado por defecto */
+  font-weight: 500;
+  position: relative;        /* Para el efecto hover */
+  padding-right: 20px;       /* Espacio para el icono */
+  transition: color 0.3s ease;
+}
+
+/* Icono de enlace (pseudo-elemento) */
+#experiencia a::after {
+  content: "↗";              /* Icono de flecha (puedes usar otro símbolo o FontAwesome) */
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 0.9em;
+  opacity: 0.6;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover sobre el enlace */
+#experiencia a:hover {
+  color: #a33b3b;            /* Un tono más claro al pasar el ratón */
+  text-decoration: underline;
+}
+
+#experiencia a:hover::after {
+  opacity: 1;
+  transform: translateX(3px) translateY(-3px);
+}
+
