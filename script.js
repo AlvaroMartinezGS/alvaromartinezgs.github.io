@@ -38,3 +38,6 @@ document.addEventListener('click', (e) => {
     sidebar.classList.remove('open');
   }
 });
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelector(".sidebar").classList.add("open");
+});
