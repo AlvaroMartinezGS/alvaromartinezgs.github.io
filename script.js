@@ -1,32 +1,44 @@
-// script.js - Control de interacción del CV Web
-// ---------------------------------------------------
-// Este archivo maneja:
-// 1. La apertura y cierre del menú lateral en móviles.
-// 2. Animaciones suaves al hacer scroll.
-
-// Selección del botón hamburguesa y la barra lateral
-const menuToggle = document.querySelector('.menu-toggle');
+// Archivo script.js - Versión completa sin omisiones
+console.log('Portfolio v5 cargado');
+const toggleBtn = document.querySelector('.menu-toggle');
 const sidebar = document.querySelector('.sidebar');
 
-// Evento: abrir/cerrar menú en móviles
-if (menuToggle && sidebar) {
-  menuToggle.addEventListener('click', () => {
-    sidebar.classList.toggle('open');
+toggleBtn.addEventListener('click', () => {
+  sidebar.classList.toggle('open');
+});
+document.querySelectorAll('.sidebar nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    sidebar.classList.remove('open');
   });
-}
+});
+let touchStartX = 0;
 
-// Cerrar el menú cuando se hace clic fuera de él (en móviles)
-document.addEventListener('click', (event) => {
-  if (
-    sidebar.classList.contains('open') &&
-    !sidebar.contains(event.target) &&
-    !menuToggle.contains(event.target)
-  ) {
+document.addEventListener('touchstart', (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+});
+
+document.addEventListener('touchend', (e) => {
+  const touchEndX = e.changedTouches[0].screenX;
+  const sidebar = document.querySelector('.sidebar');
+
+  // Si hay un gesto hacia la izquierda (más de 50px)
+  if (sidebar.classList.contains('open') && (touchStartX - touchEndX > 50)) {
     sidebar.classList.remove('open');
   }
 });
 
-// (Opcional) Animaciones adicionales al hacer scroll
-// Las clases .fade-in están en el CSS y se activan automáticamente con la animación definida.
-// Si se desea algo más dinámico (aparición al entrar en el viewport),
-// podría implementarse con IntersectionObserver aquí.
+
+document.addEventListener('click', (e) => {
+  const sidebar = document.querySelector('.sidebar');
+  const toggleBtn = document.querySelector('.menu-toggle');
+  
+  // Si el menú está abierto y el clic es fuera del menú y del botón
+  if (sidebar.classList.contains('open') &&
+      !sidebar.contains(e.target) &&
+      !toggleBtn.contains(e.target)) {
+    sidebar.classList.remove('open');
+  }
+});
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelector(".sidebar").classList.add("open");
+});

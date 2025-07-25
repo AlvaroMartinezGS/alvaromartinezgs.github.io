@@ -1,3 +1,4 @@
+/* Archivo style.css - Versión completa sin omisiones */
 body {
   margin: 0;
   font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -79,7 +80,13 @@ main {
 
 
 
-
+@media screen and (max-width: 768px) {
+  main {
+    margin-left: 0;
+    padding: 10px 15px;   /* Reduzco el padding lateral */
+    max-width: 100%;      /* Ocupa todo el ancho */
+    box-sizing: border-box; /* Asegura que padding no sume ancho */
+  }
 
   .sidebar {
     position: fixed;
@@ -178,7 +185,21 @@ html {
   scroll-behavior: smooth;
 }
 
-
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: #7a2c2c;
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1100;
+    border-radius: 4px;
+    padding: 8px 12px;
+    transition: background 0.3s;
+  }
 
   .menu-toggle:hover {
     background: #5e1f1f;
@@ -371,36 +392,8 @@ main {
 }
 
 /* Lo muestra solo en pantallas pequeñas */
-
-}
-
 @media screen and (max-width: 768px) {
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100%;
-    background-color: #ebeca9;
-    transition: left 0.3s ease;
-    z-index: 1000;
-    padding-top: 70px;
-  }
-
-  .sidebar.open {
-    left: 0;
-  }
-
-  main {
-    position: relative;
-    margin-left: 0;
-    padding: 20px;
-    transition: margin-left 0.3s ease;
-    z-index: 1;
-  }
-
-  /* Cuando el menú está abierto, desplazamos el main */
-  .sidebar.open ~ main {
-    margin-left: 250px;
+  .menu-toggle {
+    display: block;
   }
 }
