@@ -1,11 +1,22 @@
+
+/* Estilos generales */
 body {
   margin: 0;
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  display: flex;
   background-color: #f5f5f5;
   color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Forzar a que ocupe la altura completa */
 }
 
+/* Layout principal: Sidebar y contenido */
+.layout {
+  display: flex;
+  flex: 1;
+}
+
+/* Sidebar (barra lateral) */
 .sidebar {
   width: 250px;
   background-color: #ebeca9;
@@ -27,19 +38,20 @@ body {
   height: 120px;
   border-radius: 50%;
   display: block;
-  margin: 0 auto 15px auto;
+  margin: 0 auto 15px;
   object-fit: cover;
   border: 3px solid #7a2c2c;
 }
 
+/* Navegación en la barra lateral */
 .sidebar nav {
   display: flex;
   flex-direction: column;
 }
 
 .sidebar nav a {
-  display: flex;               /* Alineación horizontal */
-  align-items: center;         /* Alinea icono y texto verticalmente */
+  display: flex;
+  align-items: center;
   color: #333;
   text-decoration: none;
   padding: 8px 0;
@@ -51,13 +63,15 @@ body {
   padding-left: 5px;
 }
 
+/* Iconos en la barra lateral */
 .sidebar nav a i {
   display: inline-block;
-  width: 20px;                 /* Igual ancho para todos los iconos */
+  width: 20px;
   text-align: center;
   margin-right: 8px;
 }
 
+/* Botón de descarga CV */
 .download-cv {
   margin-top: 15px;
   background-color: #7a2c2c;
@@ -67,44 +81,22 @@ body {
   border-radius: 5px;
   font-weight: bold;
   text-decoration: none;
+  display: block;
 }
 
+.download-cv i {
+  margin-right: 5px;
+}
+
+/* Contenido principal */
 main {
-  position: relative;
-  z-index: 1;
-  margin-left: 300px;   /* Separación del menú */
-  padding: 20px 40px;   /* Añadimos padding, con 40px a derecha e izquierda */
+  flex: 1;
+  padding: 20px 40px;
   max-width: 900px;
+  margin-left: 300px; /* Dejar espacio para el sidebar */
 }
 
-
-
-@media screen and (max-width: 768px) {
-  main {
-    margin-left: 0;
-    padding: 10px 15px;   /* Reduzco el padding lateral */
-    max-width: 100%;      /* Ocupa todo el ancho */
-    box-sizing: border-box; /* Asegura que padding no sume ancho */
-  }
-
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 220px;
-    height: 100%;
-    background-color: #ebeca9;
-    transition: left 0.3s ease;
-    z-index: 1000;
-    padding-top: 70px; /* para no tapar el botón */
-  }
-
-  .sidebar.open {
-    left: 0;
-  }
-}
-
-
+/* Encabezados */
 h2 {
   color: #7a2c2c;
   border-bottom: 2px solid #7a2c2c;
@@ -118,10 +110,10 @@ h2:hover {
 }
 
 h3 {
-  color: #4e6173;                 /* Azul grisáceo */
+  color: #4e6173;
   font-size: 1.2em;
   font-weight: 600;
-  margin: 20px 0 10px 0;
+  margin: 20px 0 10px;
   position: relative;
   display: inline-block;
   padding-bottom: 5px;
@@ -142,6 +134,7 @@ h3:hover::after {
   width: 100%;
 }
 
+/* Cuadrícula de iconos (Digital y Competencias) */
 .icons-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -152,7 +145,7 @@ h3:hover::after {
   background: #fff;
   padding: 15px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s;
 }
@@ -167,6 +160,7 @@ h3:hover::after {
   margin-bottom: 8px;
 }
 
+/* Efectos fade-in */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -180,63 +174,16 @@ h3:hover::after {
   }
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-@media screen and (max-width: 768px) {
-  .menu-toggle {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    background: #7a2c2c;
-    color: #fff;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 1100;
-    border-radius: 4px;
-    padding: 8px 12px;
-    transition: background 0.3s;
-  }
-
-  .menu-toggle:hover {
-    background: #5e1f1f;
-  }
-
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 220px;
-    height: 100%;
-    background-color: #ebeca9;
-    transition: left 0.3s ease;
-    z-index: 1000;
-    padding-top: 70px; /* para no tapar el botón */
-  }
-
-  .sidebar.open {
-    left: 0;
-  }
-
-  main {
-    margin-left: 0;
-    padding: 10px;
-  }
-}
-
-/* Estilo base para los enlaces en experiencia laboral */
+/* Experiencia laboral: enlaces */
 #experiencia a {
-  color: #7a2c2c;            /* Color burdeos */
-  text-decoration: none;     /* Sin subrayado por defecto */
+  color: #7a2c2c;
+  text-decoration: none;
   font-weight: 500;
-  position: relative;        /* Para el efecto hover */
-  padding-right: 20px;       /* Espacio para el icono */
+  position: relative;
+  padding-right: 20px;
   transition: color 0.3s ease;
 }
 
-/* Icono de enlace (pseudo-elemento) */
 #experiencia a::after {
   content: "↗";
   position: absolute;
@@ -247,7 +194,6 @@ html {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Hover sobre el enlace */
 #experiencia a:hover {
   color: #a33b3b;
   text-decoration: underline;
@@ -258,7 +204,6 @@ html {
   transform: translateX(3px) translateY(-3px);
 }
 
-/* Ajustes de espacio en experiencia laboral */
 #experiencia ul {
   margin-top: 0;
   padding-left: 20px;
@@ -281,7 +226,7 @@ html {
 }
 
 #contribuciones ul li strong {
-  color: #000; /* Año en negro */
+  color: #000;
 }
 
 #contribuciones a {
@@ -315,61 +260,8 @@ html {
   margin-bottom: 5px;
   font-size: 0.95em;
 }
-.download-cv {
-  margin-top: 15px;
-  background-color: #7a2c2c;
-  color: #fff !important;
-  text-align: center;
-  padding: 10px;
-  border-radius: 5px;
-  font-weight: bold;
-  text-decoration: none;
-  display: block;             /* Para que ocupe todo el ancho */
-  justify-content: center;    /* Centra el contenido si se usa flex */
-}
 
-.download-cv i {
-  margin-right: 5px;          /* Espacio entre icono y texto */
-}
-body {
-  display: flex;
-  flex-direction: row;
-}
-
-main {
-  flex: 1;
-}
-
-footer {
-  clear: both;
-  width: 100%;
-}
-.copyleft {
-  display: inline-block;
-  transform: scaleX(-1);
-}
-body {
-  margin: 0;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
-  display: flex;
-  flex-direction: column; /* Cuerpo en columna */
-  min-height: 100vh;      /* Ocupa el alto completo */
-}
-
-.layout {
-  display: flex;
-  flex: 1;                /* Ocupa todo el espacio antes del footer */
-}
-
-main {
-  flex: 1;
-  padding: 20px 40px;
-  max-width: 900px;
-  margin-left: 300px;
-}
-
+/* Footer */
 .footer {
   text-align: center;
   padding: 20px;
@@ -378,21 +270,41 @@ main {
   border-top: 1px solid #ccc;
 }
 
-
-.sidebar nav a i {
+.copyleft {
   display: inline-block;
-  width: 20px;                 /* Igual ancho para todos los iconos */
-  text-align: center;
-  margin-right: 8px;
-}
-/* Oculta el botón hamburguesa en pantallas grandes */
-.menu-toggle {
-  display: none; /* Por defecto, oculto */
+  transform: scaleX(-1);
 }
 
-/* Lo muestra solo en pantallas pequeñas */
+/* Botón hamburguesa */
+.menu-toggle {
+  display: none; /* Oculto en pantallas grandes */
+}
+
 @media screen and (max-width: 768px) {
   .menu-toggle {
     display: block;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: #7a2c2c;
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1100;
+    border-radius: 4px;
+    padding: 8px 12px;
+    transition: background 0.3s;
+  }
+
+  .menu-toggle:hover {
+    background: #5e1f1f;
+  }
+
+  main {
+    margin-left: 0;
+    padding: 10px 15px;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 }
