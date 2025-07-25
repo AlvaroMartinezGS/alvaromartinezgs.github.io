@@ -385,3 +385,14 @@ main {
   text-align: center;
   margin-right: 8px;
 }
+/* Oculta el botón hamburguesa en pantallas grandes */
+.menu-toggle {
+  display: none; /* Por defecto, oculto */
+}
+
+/* Lo muestra solo en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+}
