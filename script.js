@@ -1,4 +1,3 @@
-// Archivo script.js - Versión completa sin omisiones
 console.log('Portfolio v5 cargado');
 const toggleBtn = document.querySelector('.menu-toggle');
 const sidebar = document.querySelector('.sidebar');
